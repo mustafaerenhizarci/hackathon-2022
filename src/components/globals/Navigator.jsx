@@ -7,7 +7,7 @@ function Navigator() {
   const location = useLocation().pathname;
 
   return (
-    <div className="h-[10vh] border-t border-info bg-base-200 w-full flex justify-around items-center">
+    <div className="h-[10vh] border-t border-info bg-base-200 w-full flex justify-around items-center px-5 py-4">
       <Link to="/">
         <HomeIcon className={`${location === "/" && "active-route"}`} />
       </Link>
