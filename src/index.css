@@ -31,3 +31,8 @@ body {
 .active-route path:first-child {
   fill: #0296E5;
 }
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
