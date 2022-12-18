@@ -32,14 +32,12 @@ const routes = [
 ];
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        {routes.map((r, i) => (
-          <Route key={i} path={r.path} element={r.element} />
-        ))}
-      </Routes>
-      <Navigator />
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      {routes.map((r, i) => (
+        <Route key={i} path={r.path} element={r.element} />
+      ))}
+    </Routes>
+    <Navigator />
+  </BrowserRouter>
 );

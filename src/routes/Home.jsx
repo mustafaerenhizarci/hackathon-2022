@@ -39,7 +39,7 @@ function Home() {
   }
 
   return (
-    <div className="w-full h-[100vh] py-4 px-3">
+    <div className="w-full h-[100vh] py-8 px-3">
       <h1 className="text-left text-lg text-primary font-semibold ">What do you want to watch?</h1>
       {/** Search Bar */}
       <Link
@@ -69,7 +69,7 @@ function Home() {
             setActiveTab("Now Playing");
           }}
           className={`tab text-primary whitespace-nowrap tab-bordered border-transparent ${
-            activeTab === "Now Playing" && "tab-active"
+            activeTab === "Now Playing" && "tab-active font-medium"
           }`}
         >
           Now Playing
@@ -80,7 +80,7 @@ function Home() {
             setActiveTab("Upcoming");
           }}
           className={`tab text-primary whitespace-nowrap tab-bordered border-transparent ${
-            activeTab === "Upcoming" && "tab-active"
+            activeTab === "Upcoming" && "tab-active font-medium"
           }`}
         >
           Upcoming
@@ -91,7 +91,7 @@ function Home() {
             setActiveTab("Top Rated");
           }}
           className={`tab text-primary whitespace-nowrap tab-bordered border-transparent ${
-            activeTab === "Top Rated" && "tab-active"
+            activeTab === "Top Rated" && "tab-active font-medium"
           }`}
         >
           Top Rated
@@ -102,7 +102,7 @@ function Home() {
             setActiveTab("Popular");
           }}
           className={`tab text-primary whitespace-nowrap tab-bordered border-transparent ${
-            activeTab === "Popular" && "tab-active"
+            activeTab === "Popular" && "tab-active font-medium"
           }`}
         >
           Popular
