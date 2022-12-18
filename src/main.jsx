@@ -11,11 +11,16 @@ import NotFound from "./routes/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Search from "./routes/Search";
 import Saved from "./routes/Saved";
+import Detail from "./routes/Detail";
 
 const routes = [
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path:"/:id-movie",
+    element:<Detail/>
   },
   {
     path: "/search",

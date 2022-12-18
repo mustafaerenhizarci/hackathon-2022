@@ -57,7 +57,7 @@ function Home() {
       <div className=" flex justify-start gap-x-[10%] items-center relative overflow-x-auto mt-10 pl-4 pb-8 hide-scrollbar">
         {rated.results?.map((movie, i) => {
           return (
-            <MovieCard key={i} image={movie.poster_path} className="w-[48%] h-52 object-cover" />
+            <MovieCard key={i} image={movie} className="w-[48%] h-52 object-cover" />
           );
         })}
       </div>
@@ -125,7 +125,7 @@ function Home() {
       ) : (
         <div className="grid grid-cols-3 gap-3 px-4 pb-[15vh]">
           {collection.results?.map((movie, i) => {
-            return <MovieCard key={i} image={movie.poster_path} />;
+            return <MovieCard key={i} image={movie} />;
           })}
         </div>
       )}

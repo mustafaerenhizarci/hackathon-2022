@@ -7,17 +7,19 @@ function Navigator() {
   const location = useLocation().pathname;
 
   return (
-    <div className="h-[10vh] fixed bottom-0 z-10 border-t border-info bg-base-200 w-full flex justify-around items-center px-5 py-4">
-      <Link to="/">
-        <HomeIcon className={`${location === "/" && "active-route"}`} />
-      </Link>
-      <Link to="/search">
-        <SearchIcon className={`${location === "/search" && "active-route"}`} />
-      </Link>
-      <Link to="/saved">
-        <SavedIcon className={`${location === "/saved" && "active-route"}`} />
-      </Link>
-    </div>
+    !location.includes("movie") && (
+      <div className="h-[10vh] fixed bottom-0 z-10 border-t border-info bg-base-200 w-full flex justify-around items-center px-5 py-4">
+        <Link to="/">
+          <HomeIcon className={`${location === "/" && "active-route"}`} />
+        </Link>
+        <Link to="/search">
+          <SearchIcon className={`${location === "/search" && "active-route"}`} />
+        </Link>
+        <Link to="/saved">
+          <SavedIcon className={`${location === "/saved" && "active-route"}`} />
+        </Link>
+      </div>
+    )
   );
 }
 

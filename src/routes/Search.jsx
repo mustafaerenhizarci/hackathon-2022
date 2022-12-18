@@ -18,8 +18,12 @@ const NoResult = () => {
   return (
     <div className="mt-32 text-center w-1/2 mx-auto flex flex-col justify-center items-center">
       <NoResultIcon />
-      <h1 className="mt-5 font-montserrat font-semibold text-[#EBEBEF]">We Are Sorry, We Can Not Find The Movie :(</h1>
-      <p className="mt-2 text-xs text-[#92929D] font-montserrat font-medium">Find your movie by Type title,categories,years,etc</p>
+      <h1 className="mt-5 font-montserrat font-semibold text-[#EBEBEF]">
+        We Are Sorry, We Can Not Find The Movie :(
+      </h1>
+      <p className="mt-2 text-xs text-[#92929D] font-montserrat font-medium">
+        Find your movie by Type title,categories,years,etc
+      </p>
     </div>
   );
 };
@@ -97,7 +101,7 @@ function Search() {
             return (
               movie.poster_path && (
                 <div key={i} className="w-full flex h-60 justify-center items-start">
-                  <MovieCard className="w-1/3" image={movie.poster_path} />
+                  <MovieCard className="w-1/3" image={movie} />
                   <div className="w-1/2 flex flex-col items-start px-2">
                     <h1 className="w-full text-primary text-left py-2">{movie.original_title}</h1>
                     <div className="flex justify-center items-center gap-x-1 mt-10">
@@ -107,12 +111,12 @@ function Search() {
 
                     <div className="text-primary flex justify-center items-center gap-x-1 mt-2">
                       <TicketIcon />
-                      <h6 className="text-xs">{movie.vote_average}</h6>
+                      <h6 className="text-xs">Action</h6>
                     </div>
 
                     <div className="text-primary flex justify-center items-center gap-x-1 mt-2">
                       <CalendarIcon />
-                      <h6 className="text-xs">{movie.release_date.slice(0, 4)}</h6>
+                      <h6 className="text-xs">{new Date(movie.release_date).getFullYear()}</h6>
                     </div>
 
                     <div className="flex justify-center items-center gap-x-1 mt-2 text-primary">
